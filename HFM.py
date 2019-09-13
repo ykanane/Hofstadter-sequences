@@ -19,6 +19,7 @@ def female(n, memo):
     memo[key] = ret_val
     return ret_val
 
+
 def male(n, memo):
     key = "M" + str(n)
     if key in memo:
@@ -28,6 +29,7 @@ def male(n, memo):
     ret_val = n - female(male(n-1, memo), memo)
     memo[key] = ret_val
     return ret_val
+
 
 if __name__ == "__main__":
     n = sys.argv[1]
